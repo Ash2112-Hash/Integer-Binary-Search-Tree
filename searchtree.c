@@ -94,9 +94,15 @@ void PreOrder(NODE* root) {
 
 
 void InOrder1(NODE* p) {
-  if (p->left) InOrder1(p->left);
+  if (p->left) {
+    InOrder1(p->left);
+  }
+
   printf("%d ",p->value);
-  if (p->right) InOrder1(p->right);
+  
+  if (p->right) {
+    InOrder1(p->right);
+  }
 }
 
 void InOrder(NODE* root) {
@@ -109,8 +115,14 @@ void InOrder(NODE* root) {
 }
 
 void PostOrder1(NODE* p) {
-  if (p->left) PostOrder1(p->left);
-  if (p->right) PostOrder1(p->right);
+  if (p->left){
+    PostOrder1(p->left);
+    }
+  
+  if (p->right){
+    PostOrder1(p->right);
+  }
+  
   printf("%d ",p->value);
 }
 
